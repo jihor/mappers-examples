@@ -1,0 +1,26 @@
+Configuration:
+  status: warn
+  name: TestLoggingConfig
+  properties:
+    property:
+      name: filename
+      value: logs/test.log
+  thresholdFilter:
+    level: info
+  appenders:
+    Console:
+      name: STDOUT
+      PatternLayout:
+        Pattern: "%m%n"
+    File:
+      name: FILE
+      fileName: ${filename}
+      PatternLayout:
+        Pattern: "%d %p %C{1.} [%t] %m%n"
+
+  Loggers:
+    Root:
+      level: debug
+      AppenderRef:
+        - ref: STDOUT
+        - ref: FILE

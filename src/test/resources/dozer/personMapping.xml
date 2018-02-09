@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+    <!-- The wildcard attribute is set to true by default. This means that it will automatically try to map every property in the two objects. See http://dozer.sourceforge.net/documentation/mappings.html -->
+    <mapping>
+        <class-a>ru.jihor.dozer.model.source.SourcePerson</class-a>
+        <class-b>ru.jihor.dozer.model.target.TargetPerson</class-b>
+        <field>
+            <a>comment</a>
+            <b>description</b>
+        </field>
+        <field custom-converter="ru.jihor.dozer.converters.StringToGenderConverter">
+            <a>gender</a>
+            <b>gender</b>
+        </field>
+        <field custom-converter="ru.jihor.dozer.converters.ChangesToLastChangeConverter">
+            <a>changes</a>
+            <b>lastChanged</b>
+            <a-hint>java.lang.String</a-hint> <!-- Workaround, see https://github.com/DozerMapper/dozer/issues/103-->
+        </field>
+        <field custom-converter="ru.jihor.dozer.converters.ChangesToLastChangeDescriptionConverter">
+            <a>changes</a>
+            <b>lastChangedDescription</b>
+            <a-hint>java.lang.String</a-hint> <!-- Workaround, see https://github.com/DozerMapper/dozer/issues/103-->
+        </field>
+    </mapping>
+
+</mappings>
