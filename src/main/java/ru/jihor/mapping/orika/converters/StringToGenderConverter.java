@@ -1,9 +1,9 @@
-package ru.jihor.orika.converters;
+package ru.jihor.mapping.orika.converters;
 
 import ma.glasnost.orika.MappingContext;
 import ma.glasnost.orika.converter.BidirectionalConverter;
 import ma.glasnost.orika.metadata.Type;
-import ru.jihor.orika.model.target.Gender;
+import ru.jihor.model.target.Gender;
 
 /**
  * @author jihor (dmitriy_zhikharev@rgs.ru)

@@ -4,12 +4,11 @@ import ma.glasnost.orika.impl.DefaultMapperFactory
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
 import ru.jihor.LoggerAwareSpek
-import ru.jihor.orika.converters.ChangesToLastChangeConverter
-import ru.jihor.orika.converters.StringToGenderConverter
-import ru.jihor.orika.model.source.SourcePerson
-import ru.jihor.orika.model.target.Gender
-import ru.jihor.orika.model.target.TargetPerson
-import java.time.LocalDate
+import ru.jihor.mapping.orika.converters.ChangesToLastChangeConverter
+import ru.jihor.mapping.orika.converters.StringToGenderConverter
+import ru.jihor.model.source.SourcePerson
+import ru.jihor.model.target.Gender
+import ru.jihor.model.target.TargetPerson
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
 
@@ -42,7 +41,7 @@ class OrikaTest : LoggerAwareSpek({
 
         mapperFactory.converterFactory.registerConverter(changesToLastChangeConverterId, ChangesToLastChangeConverter())
         mapperFactory.converterFactory.registerConverter(stringToGenderConverterId, StringToGenderConverter())
-        mapperFactory.converterFactory.registerConverter(changesToLastChangeDescriptionConverterId, ru.jihor.orika.converters.ChangesToLastChangeDescriptionConverter())
+        mapperFactory.converterFactory.registerConverter(changesToLastChangeDescriptionConverterId, ru.jihor.mapping.orika.converters.ChangesToLastChangeDescriptionConverter())
 
         mapperFactory.classMap(SourcePerson::class.java, TargetPerson::class.java)
                 .field("comment", "description")

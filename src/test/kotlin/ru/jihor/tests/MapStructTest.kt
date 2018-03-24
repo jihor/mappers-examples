@@ -3,8 +3,8 @@ package ru.jihor.tests
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
 import ru.jihor.LoggerAwareSpek
-import ru.jihor.mapstruct.model.source.SourcePerson
-import ru.jihor.mapstruct.model.target.Gender
+import ru.jihor.model.source.SourcePerson
+import ru.jihor.model.target.Gender
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
 
@@ -29,7 +29,7 @@ class MapStructTest : LoggerAwareSpek({
 
     describe("MapStruct mapping") {
         it("Should map person correctly") {
-            val mapper = ru.jihor.mapstruct.mappers.PersonMapperImpl()
+            val mapper = ru.jihor.mapping.mapstruct.mappers.PersonMapperImpl()
 // or
 //            val mapper = Mappers.getMapper(PersonMapper::class.java)
             val target = mapper.sourcePersonToTargetPerson(source)

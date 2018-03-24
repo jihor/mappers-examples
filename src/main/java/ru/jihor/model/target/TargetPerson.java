@@ -1,4 +1,4 @@
-package ru.jihor.dozer.model.target;
+package ru.jihor.model.target;
 
 import lombok.Data;
 

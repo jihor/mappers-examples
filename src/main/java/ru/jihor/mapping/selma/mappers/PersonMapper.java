@@ -1,11 +1,11 @@
-package ru.jihor.selma.mappers;
+package ru.jihor.mapping.selma.mappers;
 
 import fr.xebia.extras.selma.Field;
 import fr.xebia.extras.selma.Mapper;
 import one.util.streamex.StreamEx;
-import ru.jihor.selma.model.source.SourcePerson;
-import ru.jihor.selma.model.target.Gender;
-import ru.jihor.selma.model.target.TargetPerson;
+import ru.jihor.model.source.SourcePerson;
+import ru.jihor.model.target.Gender;
+import ru.jihor.model.target.TargetPerson;
 
 import java.time.LocalDate;
 import java.util.Map;
@@ -18,7 +18,7 @@ import java.util.Optional;
 @Mapper(withCustomFields = {
         @Field({"comment", "description"}),
         @Field({"changes", "lastChanged"})},
-        withIgnoreFields = {"ru.jihor.selma.model.target.TargetPerson.lastchangeddescription"}
+        withIgnoreFields = {"ru.jihor.model.target.TargetPerson.lastChangedDescription"}
 )
 public abstract class PersonMapper {
     public abstract TargetPerson asTargetPerson(SourcePerson source);

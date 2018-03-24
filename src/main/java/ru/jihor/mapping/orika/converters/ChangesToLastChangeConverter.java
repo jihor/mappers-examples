@@ -1,4 +1,4 @@
-package ru.jihor.orika.converters;
+package ru.jihor.mapping.orika.converters;
 
 import ma.glasnost.orika.MappingContext;
 import ma.glasnost.orika.converter.BidirectionalConverter;

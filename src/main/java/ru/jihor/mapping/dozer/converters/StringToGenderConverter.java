@@ -1,7 +1,9 @@
-package ru.jihor.dozer.converters;
+package ru.jihor.mapping.dozer.converters;
 
 import org.dozer.DozerConverter;
-import ru.jihor.dozer.model.target.Gender;
+import ru.jihor.model.target.Gender;
+
+import java.util.Optional;
 
 /**
  * @author jihor (dmitriy_zhikharev@rgs.ru)
@@ -29,6 +31,8 @@ public class StringToGenderConverter extends DozerConverter<String, Gender> {
 
     @Override
     public String convertFrom(Gender source, String destination) {
-        return (source != null) ? source.toString() : "unknown";
+        return Optional.ofNullable(source)
+                       .map(Gender::toString)
+                       .orElse("unknown");
     }
 }

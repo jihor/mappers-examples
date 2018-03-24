@@ -1,4 +1,4 @@
-package ru.jihor.mapstruct.model.source;
+package ru.jihor.model.source;
 
 import lombok.Data;
 

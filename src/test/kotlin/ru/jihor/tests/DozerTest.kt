@@ -4,9 +4,9 @@ import org.dozer.DozerBeanMapper
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
 import ru.jihor.LoggerAwareSpek
-import ru.jihor.dozer.model.source.SourcePerson
-import ru.jihor.dozer.model.target.Gender
-import ru.jihor.dozer.model.target.TargetPerson
+import ru.jihor.model.source.SourcePerson
+import ru.jihor.model.target.Gender
+import ru.jihor.model.target.TargetPerson
 import java.util.*
 import kotlin.test.assertEquals
 import kotlin.test.assertNull

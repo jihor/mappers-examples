@@ -1,12 +1,12 @@
-package ru.jihor.mapstruct.mappers;
+package ru.jihor.mapping.mapstruct.mappers;
 
 import one.util.streamex.StreamEx;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import ru.jihor.mapstruct.model.source.SourcePerson;
-import ru.jihor.mapstruct.model.target.Gender;
-import ru.jihor.mapstruct.model.target.TargetPerson;
+import ru.jihor.model.source.SourcePerson;
+import ru.jihor.model.target.Gender;
+import ru.jihor.model.target.TargetPerson;
 
 import java.time.LocalDate;
 import java.util.Map;

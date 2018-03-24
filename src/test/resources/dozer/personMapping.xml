@@ -6,22 +6,22 @@
 
     <!-- The wildcard attribute is set to true by default. This means that it will automatically try to map every property in the two objects. See http://dozer.sourceforge.net/documentation/mappings.html -->
     <mapping>
-        <class-a>ru.jihor.dozer.model.source.SourcePerson</class-a>
-        <class-b>ru.jihor.dozer.model.target.TargetPerson</class-b>
+        <class-a>ru.jihor.model.source.SourcePerson</class-a>
+        <class-b>ru.jihor.model.target.TargetPerson</class-b>
         <field>
             <a>comment</a>
             <b>description</b>
         </field>
-        <field custom-converter="ru.jihor.dozer.converters.StringToGenderConverter">
+        <field custom-converter="ru.jihor.mapping.dozer.converters.StringToGenderConverter">
             <a>gender</a>
             <b>gender</b>
         </field>
-        <field custom-converter="ru.jihor.dozer.converters.ChangesToLastChangeConverter">
+        <field custom-converter="ru.jihor.mapping.dozer.converters.ChangesToLastChangeConverter">
             <a>changes</a>
             <b>lastChanged</b>
             <a-hint>java.lang.String</a-hint> <!-- Workaround, see https://github.com/DozerMapper/dozer/issues/103-->
         </field>
-        <field custom-converter="ru.jihor.dozer.converters.ChangesToLastChangeDescriptionConverter">
+        <field custom-converter="ru.jihor.mapping.dozer.converters.ChangesToLastChangeDescriptionConverter">
             <a>changes</a>
             <b>lastChangedDescription</b>
             <a-hint>java.lang.String</a-hint> <!-- Workaround, see https://github.com/DozerMapper/dozer/issues/103-->

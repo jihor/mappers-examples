@@ -1,4 +1,4 @@
-package ru.jihor.dozer.converters;
+package ru.jihor.mapping.dozer.converters;
 
 import one.util.streamex.StreamEx;
 import org.dozer.DozerConverter;
@@ -23,7 +23,8 @@ public class ChangesToLastChangeDescriptionConverter extends DozerConverter<Map<
     public String convertTo(Map<LocalDate, String> source, String destination) {
         // no way to directly separate lastChanged and lastChangedDescription
         Optional<LocalDate> maxDate = (source != null) ?
-                                      StreamEx.ofKeys(source).max(LocalDate::compareTo) : Optional.empty();
+                StreamEx.ofKeys(source).max(LocalDate::compareTo) :
+                Optional.empty();
         return maxDate.map(source::get).orElse("none");
 
     }

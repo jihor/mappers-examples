@@ -3,10 +3,10 @@ package ru.jihor.tests
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
 import ru.jihor.LoggerAwareSpek
-import ru.jihor.selma.mappers.PersonMapper.applyPostMapping
-import ru.jihor.selma.mappers.PersonMapperSelmaGeneratedClass
-import ru.jihor.selma.model.source.SourcePerson
-import ru.jihor.selma.model.target.Gender
+import ru.jihor.mapping.selma.mappers.PersonMapper.applyPostMapping
+import ru.jihor.mapping.selma.mappers.PersonMapperSelmaGeneratedClass
+import ru.jihor.model.source.SourcePerson
+import ru.jihor.model.target.Gender
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
 
